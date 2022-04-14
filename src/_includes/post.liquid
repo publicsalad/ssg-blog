@@ -1,0 +1,18 @@
+---
+layout: base.liquid
+---
+
+<article>
+  <h1>{{ title }}</h1>
+  <ul class="post-meta post-meta--single">
+    <li>
+      <img src="{{ " /css/logos/calendar.svg" | url }}" alt="">
+      <span>{{ date | date: "%B %d, %Y" }}</span>
+    </li>
+    <li>
+      <img src="{{ " /css/logos/clock.svg" | url }}" alt="">
+      <span>{{ read | append: " Minute Read" }}</span>
+    </li>
+  </ul>
+  <div class="post-content">{{ content }}</div>
+</article>

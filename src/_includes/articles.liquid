@@ -1,0 +1,23 @@
+---
+layout: base.liquid
+---
+
+<section class="blog-posts">
+  {{ content }}
+  {% for post in collections.post reversed %}
+  <a href="{{ post.url }}" class="blog-posts__item">
+    <h3>{{ post.data.title }}</h3>
+    <ul class="post-meta">
+      <li>
+        <img src="{{ " /css/logos/calendar.svg" | url }}" alt="">
+        <span>{{ post.data.date | date: "%B %d, %Y" }}</span>
+      </li>
+      <li>
+        <img src="{{ " /css/logos/clock.svg" | url }}" alt="">
+        <span>{{ post.data.read | append: " Minute Read" }}</span>
+      </li>
+    </ul>
+    <p>{{ post.data.description | truncate: 210, '...[Read More]' }}</p>
+  </a>
+  {% endfor %}
+</section>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+  {% if description %}
+    {{ description }}
+  {% else %}
+    {{ site.description }}
+  {% endif %}
+  ">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ "/css/style.css" | url }}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a class="logo" href="{{ "/" | url }}">
+          <img src="{{ "/css/logos/mdi_mustache.png" }}"/>
+          <span>publicSalad</span>
+        </a>
+        <ul>
+          {% for item in site.nav_items %}
+            <li>
+              {% if item.url == page.url %}
+              <a href="{{ item.url }}" aria-current="active">{{ item.name }}</a>
+              {% else %}
+                <a href="{{ item.url }}">{{ item.name }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        {{content}}
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <ul>
+        {% for nav in site.nav_items %}
+          <li>
+            <a href="{{ nav.url | url}}">{{ nav.name }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+        <ul class="social-links">
+        {% for logo in site.social_media %}
+          <li>
+            <a href="{{ logo.url }}"><img src="{{ logo.name | url | append: ".svg" | prepend: "/css/logos/" }}" alt="{{ logo.name | append: " svg icon" }}"></a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

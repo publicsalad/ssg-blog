@@ -1,0 +1,37 @@
+---
+layout: base.liquid
+title: "Home"
+---
+
+<main>
+  <section class="quick-intro">
+    <img src="{{ "/css/images/avatar.png" | url }}" alt="">
+    <h1>Hi! I'm publicSalad!</h1>
+    <p>I’m a developer & loves making coding videos!</p>
+    <ul>
+      {% for logo in site.social_media %}
+        <li>
+          <a href="{{ logo.url }}"><img src="{{ logo.name | url | append: ".svg" | prepend: "/css/logos/" }}" alt="{{ logo.name | append: " svg icon" }}"></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="blog-posts">
+    {% for post in collections.post reversed %}
+    <a href="{{ post.url }}" class="blog-posts__item">
+      <h3>{{ post.data.title }}</h3>  
+      <ul class="post-meta">
+        <li>
+          <img src="{{ "/css/logos/calendar.svg" | url }}" alt="">
+          <span>{{ post.data.date | date: "%B %d, %Y" }}</span>
+        </li>
+        <li>
+          <img src="{{ "/css/logos/clock.svg" | url }}" alt="">
+          <span>{{ post.data.read | append: " Minute Read" }}</span>
+        </li>
+      </ul>
+      <p>{{ post.data.description | truncate: 210, '...[Read More]' }}</p>
+    </a>
+    {% endfor %}
+  </section>
+</main>

@@ -1,0 +1,25 @@
+---
+layout: base.liquid
+---
+
+<div class="about-page">
+  <div class="about-content">
+    {{ content }}
+  </div>
+
+  <div class="about-blocks">
+    {% for block in about.info_blocks %}
+    <div class="about-blocks__block">
+      <h3>{{ block.title }}</h3>
+      <ul>
+        {% for item in block.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="text-center">
+    {{ about.ending_text }}
+  </p>
+</div>

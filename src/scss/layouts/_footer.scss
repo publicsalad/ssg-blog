@@ -1,0 +1,40 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #dab3b3;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    padding: 25px 0;
+    margin: 0;
+
+    &.social-links li {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+  }
+}

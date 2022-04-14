@@ -1,0 +1,31 @@
+{
+  "nav_items": [
+    {
+      "url": "/articles",
+      "name": "Articles"
+    },
+    {
+      "url": "/about",
+      "name": "About"
+    },
+    {
+      "url": "/contact",
+      "name": "Contact"
+    }
+  ],
+  "social_media": [
+    {
+      "url": "/",
+      "name": "github"
+    },
+    {
+      "url": "/",
+      "name": "youtube"
+    },
+    {
+      "url": "/",
+      "name": "twitter"
+    }
+  ],
+  "description": "My Personal Blog site to talk about my work!"
+}

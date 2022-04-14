@@ -1,0 +1,85 @@
+h1 {
+  font-family: "Playfair Display";
+  text-align: center;
+}
+
+.post-meta {
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  &--single {
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 25px;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+
+    span {
+      color: $text-color;
+    }
+  }
+}
+
+.blog-posts {
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-family: "Playfair Display";
+  }
+
+  p {
+    color: #696767;
+    line-height: 1.5;
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+article {
+  p {
+    line-height: 1.5;
+    color: #2f2929;
+  }
+
+  strong {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.post-content {
+  img {
+    display: block;
+    margin: 2em auto;
+  }
+
+  h2,
+  h3,
+  h4 {
+    border-bottom: 1px solid #696767;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+  }
+}

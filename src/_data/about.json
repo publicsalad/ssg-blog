@@ -1,0 +1,20 @@
+{
+  "name": "About",
+  "ending_text": "Thats about it... Thank you i’m here all night.",
+  "info_blocks": [
+    {
+      "title": "The Software I Use",
+      "items": [
+        "Chrome",
+        "Visual Studio Code",
+        "Insomnia",
+        "Windows Termianl",
+        "Figma"
+      ]
+    },
+    {
+      "title": "The Hardware I Use",
+      "items": ["PC", "i5 3rd Gen", "GTX 1050 TI", "8gb Ram", "4k Monitor"]
+    }
+  ]
+}

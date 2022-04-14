@@ -1,0 +1,29 @@
+// Variables
+$text-color: #6a9699;
+
+* {
+  box-sizing: border-box;
+}
+
+@import "./fonts";
+
+body {
+  font-family: "Inter", Arial, sans-serif, serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Inter";
+}
+
+p,
+strong {
+  font-family: "Inter", Arial, sans-serif, serif;
+}
+
+.text-center {
+  text-align: center;
+}

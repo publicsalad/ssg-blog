@@ -1,0 +1,41 @@
+header {
+  border-bottom: 1px solid #dab3b3;
+  margin-bottom: 65px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: "Rubik";
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 25px 0;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+  }
+}
